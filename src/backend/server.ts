@@ -9,6 +9,6 @@ export function CreateServer() {
   app.use(express.json({ limit: '1.5mb' }));
   app.use(ExceptionHandler);
   app.use(routes);
-  app.use(express.static('/dist'));
+  app.use(express.static('/build'));
   return app.listen();
 }
